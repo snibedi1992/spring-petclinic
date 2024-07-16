@@ -8,12 +8,12 @@ pipeline {
         }
          stage('DockerBuild') {
             steps {
-                    sh 'docker build -t habibul786/testrepo:latest'
+                    sh 'docker build -t habibul786/springPetclinic:latest'
                    }
            }
          stage('Imagepush') {
             steps {
-                    sh 'docker push habibul786/testrepo:latest'
+                    sh 'docker push habibul786/springPetclinic:latest'
                    }
            }
        }
