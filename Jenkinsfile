@@ -1,31 +1,20 @@
 pipeline {
     agent any
-
-    stages {
+     stages {
         stage('MavenPackage') {
             steps {
-                   
                 sh './mvnw package'
-
-            }
+             }
         }
-
-        stage('DockerBuild') {
+         stage('DockerBuild') {
             steps {
-                     
-                    sh 'docker build -t habibul786/testrepo:latest .'
+                    sh 'docker build -t habibul786/testrepo:latest'
                    }
            }
-
-        stage('Imagepush') {
+         stage('Imagepush') {
             steps {
-                     
-                    sh 'docker push habibul786/testrepo:latest '
+                    sh 'docker push habibul786/testrepo:latest'
                    }
            }
-
-      }
-   
+       }
    }
-
-
