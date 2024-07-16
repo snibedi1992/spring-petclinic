@@ -8,7 +8,7 @@ pipeline {
         }
          stage('DockerBuild') {
             steps {
-                    sh 'docker build -t habibul786/springPetclinic:latest'
+                    sh 'docker build -t habibul786/springPetclinic:latest .'
                    }
            }
          stage('Imagepush') {
